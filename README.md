@@ -41,7 +41,7 @@ Report: 3 1 E
 
 To run the program simply run
 ```
-python gridbot.py
+python3 gridbot.py
 ```
 and prompts for the required arguments will appear.
 
