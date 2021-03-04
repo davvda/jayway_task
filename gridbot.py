@@ -1,3 +1,6 @@
+#  Welcomes the user and prompts for one input argument at
+#  a time. Collects all arguments into an argument list and
+#  returns the list.
 def getArgs():
 	# Get all user input
 	print("Welcome to GridBot!\n--------------------")
@@ -13,6 +16,9 @@ def getArgs():
 	args = [width, depth, x_start, y_start, start_dir, movement_cmd]
 	return args
 
+
+# Checks whether the given user inputs are according to
+# the requirements for the program.
 def checkArgs(args):
 	# Allowed movement commands and starting directions
 	allowed_cmds = set('LRF')
@@ -40,6 +46,10 @@ def checkArgs(args):
 	else:
 		return True
 
+#  Takes the given arguments as input and returns an
+#  index for the direction, the grid's dimensions, the
+#  starting position coordinates, and the movement 
+#  commands as separate chars in a list.
 def parseArgs(args):
 	# Parse grid size and starting position
 	grid_max = [int(args[0])-1, int(args[1])-1]
@@ -56,6 +66,8 @@ def parseArgs(args):
 
 	return grid_max, grid_position, direction_id, input_list
 
+#  Executes the movement commands given by the user and
+#  returns the final positional coordinates and direction.
 def walk(grid_max, grid_position, direction_id, input_list):
 	direction_list = ['N', 'E', 'S', 'W']
 
