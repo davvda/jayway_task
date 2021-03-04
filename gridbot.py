@@ -1,3 +1,5 @@
+#  David Ström, Lund, 2021-03-04
+
 #  Welcomes the user and prompts for one input argument at
 #  a time. Collects all arguments into an argument list and
 #  returns the list.
