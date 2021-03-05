@@ -1,4 +1,4 @@
-#  David Ström, Lund, 2021-03-04
+#  David Strom, Lund, 2021-03-04
 
 #  Welcomes the user and prompts for one input argument at
 #  a time. Collects all arguments into an argument list and
@@ -57,7 +57,7 @@ def parseArgs(args):
 	grid_max = [int(args[0])-1, int(args[1])-1]
 	grid_position = [int(args[2]), int(args[3])]
 
-	# Parse starting direction
+	# Parse starting direction to an index number
 	if args[4] == 'N': direction_id = 0
 	elif args[4] == 'E': direction_id = 1
 	elif args[4] == 'S': direction_id = 2
@@ -100,8 +100,9 @@ def walk(grid_max, grid_position, direction_id, input_list):
 	return grid_position, direction_list[direction_id]
 
 def main():
+	# Get input arguments
 	args = getArgs()
-	# Check if input arguments are correct
+	# Check if input arguments are valid
 	if checkArgs(args):
 		print("Grid size:", args[0], "x", args[1], 
 			"\nStarting position:", args[2], ",", args[3],

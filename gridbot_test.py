@@ -1,4 +1,4 @@
-#  David Ström, Lund, 2021-03-04
+#  David Strom, Lund, 2021-03-04
 
 from gridbot import checkArgs, walk
 
